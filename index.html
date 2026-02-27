@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTC/USDT.D Ratio Chart</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #131722;
+            color: #d1d4dc;
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            color: #e0e3eb;
+            text-align: center;
+        }
+        .chart-container {
+            width: 100%;
+            max-width: 1200px;
+            height: 600px;
+            border: 1px solid #2a2e39;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .note {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: #787b86;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 BTCUSDT / USDT Dominance 비율 차트</h1>
+    <div class="chart-container">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container" style="height:100%;width:100%">
+            <div id="tradingview_chart" style="height:100%;width:100%"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+            <script type="text/javascript">
+                new TradingView.widget({
+                    "autosize": true,
+                    "symbol": "BINANCE:BTCUSDT/CRYPTOCAP:USDT.D",
+                    "interval": "D",
+                    "timezone": "Asia/Seoul",
+                    "theme": "dark",
+                    "style": "1",
+                    "locale": "kr",
+                    "toolbar_bg": "#131722",
+                    "enable_publishing": false,
+                    "hide_top_toolbar": false,
+                    "hide_legend": false,
+                    "save_image": true,
+                    "container_id": "tradingview_chart",
+                    "backgroundColor": "#131722",
+                    "gridColor": "#1e222d"
+                });
+            </script>
+        </div>
+        <!-- TradingView Widget END -->
+    </div>
+    <p class="note">BINANCE:BTCUSDT ÷ CRYPTOCAP:USDT.D — USDT 도미넌스 대비 BTC 가격 비율</p>
+</body>
+</html>
