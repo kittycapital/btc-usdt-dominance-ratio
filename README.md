@@ -1,1 +1,0 @@
-# btc-usdt-dominance-ratio
