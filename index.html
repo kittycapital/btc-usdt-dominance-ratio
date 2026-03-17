@@ -35,27 +35,28 @@
         }
         /* Share Bar */
         .share-bar {
-            display: flex; justify-content: center; align-items: center; gap: 8px;
-            padding: 10px 16px; background: #0a0a0a; flex-shrink: 0;
+            display: flex; justify-content: center; align-items: center; gap: 10px;
+            padding: 10px 16px; background: #0a0a0a; flex-shrink: 0; flex-wrap: wrap;
         }
         .share-btn {
-            display: inline-flex; align-items: center; gap: 6px;
-            padding: 8px 14px; border: 1px solid #2a2a2a; border-radius: 20px;
-            background: #111111; color: #888; font-size: 12px;
+            display: flex; align-items: center; gap: 6px;
+            padding: 8px 14px; border: 1px solid rgba(255,255,255,.12); border-radius: 8px;
+            background: transparent; color: #888; font-size: .72rem;
             font-family: 'Noto Sans KR', sans-serif; cursor: pointer; transition: all 0.2s;
         }
-        .share-btn:hover { border-color: #555; color: #fff; }
+        .share-btn:hover { background: #1a1a1a; }
         .share-btn svg { width: 14px; height: 14px; }
         .share-btn.twitter:hover { border-color: #1da1f2; color: #1da1f2; }
         .share-btn.kakao:hover { border-color: #fee500; color: #fee500; }
-        .share-btn.telegram:hover { border-color: #0088cc; color: #0088cc; }
-        .share-btn.instagram:hover { border-color: #e4405f; color: #e4405f; }
+        .share-btn.telegram:hover { border-color: #26a5e4; color: #26a5e4; }
+        .share-btn.instagram:hover { border-color: #E4405F; color: #E4405F; }
         .share-btn.link:hover { border-color: #00d4aa; color: #00d4aa; }
         .toast {
             position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%);
-            background: #00d4aa; color: #000; padding: 10px 24px; border-radius: 8px;
-            font-size: 13px; font-weight: 600; opacity: 0; transition: opacity 0.3s;
-            pointer-events: none; z-index: 9999;
+            background: #1a1a1a; color: #e5e5e5; padding: 10px 18px; border-radius: 10px;
+            border: 1px solid rgba(255,255,255,.12); border-left: 3px solid #00d4aa;
+            font-size: .78rem; font-weight: 500; opacity: 0; transition: opacity 0.3s;
+            pointer-events: none; z-index: 9999; box-shadow: 0 8px 32px rgba(0,0,0,.7);
         }
         .toast.show { opacity: 1; }
     </style>
